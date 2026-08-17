@@ -53,97 +53,153 @@
   <!-- Contact Grid -->
   <section class="section section--light">
     <div class="container">
-      <div class="grid grid--2-col align-start animate-on-scroll fade-up">
+      <div class="grid grid--2-col align-start animate-on-scroll fade-up" style="gap: 3rem;">
         
         <!-- Left: Form -->
-        <div class="contact-form-wrapper">
-          <h2 class="mb-4">Request Strategic Scoping</h2>
-          <form class="form">
-            <div class="form__group">
-              <label class="form__label">Full Name</label>
-              <input type="text" class="form__input" required>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Company/Organization</label>
-              <input type="text" class="form__input" required>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Work Email</label>
-              <input type="email" class="form__input" required>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Phone (optional)</label>
-              <input type="tel" class="form__input">
-            </div>
-            <div class="form__group">
-              <label class="form__label">Program Phase</label>
-              <select class="form__input" required>
-                <option value="" disabled selected>Select Phase</option>
-                <option value="pre-clinical">Pre-Clinical</option>
-                <option value="phase-1-2">Phase 1/2</option>
-                <option value="phase-3">Phase 3</option>
-                <option value="registration">Registration</option>
-                <option value="post-approval">Post-Approval</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Therapeutic Area</label>
-              <select class="form__input" required>
-                <option value="" disabled selected>Select Area</option>
-                <option value="oncology">Oncology</option>
-                <option value="rare-disease">Rare Disease</option>
-                <option value="cgt">CGT</option>
-                <option value="biologics">Biologics</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Brief Description</label>
-              <textarea class="form__textarea" rows="4" required></textarea>
-            </div>
-            <div class="form__group">
-              <label class="form__label">Attach Confidential Documents</label>
-              <div class="form__upload text-center p-4" style="border: 2px dashed var(--silver-light); border-radius: 8px; cursor: pointer;">
-                <p class="mb-2">Drag and drop files here or click to browse</p>
-                <span class="text-sm text-mono" style="color:var(--silver);">All uploads are encrypted and NDA-protected</span>
+        <div class="intake-portal">
+          <div class="mb-4">
+            <span class="section__tag" style="color:var(--cobalt);">CONFIDENTIAL ENGAGEMENT INTAKE</span>
+            <h2 style="color:var(--navy); margin-top:0.25rem;">Request Strategic Scoping</h2>
+            <p style="color:#475569; font-size:0.95rem;">Connect with our senior regulatory strategists. All document reviews are conducted under immediate Mutual NDA (MNDA).</p>
+          </div>
+
+          <form class="form" id="scoping-form">
+            <div class="grid grid--2-col" style="gap: 1rem; margin-bottom: 1rem;">
+              <div class="form__group" style="margin-bottom:0;">
+                <label class="form__label">Full Name *</label>
+                <input type="text" class="form__input" placeholder="Dr. Jane Smith" required>
+              </div>
+              <div class="form__group" style="margin-bottom:0;">
+                <label class="form__label">Company / Sponsor *</label>
+                <input type="text" class="form__input" placeholder="Aethel Biotherapeutics" required>
               </div>
             </div>
-            <button type="submit" class="btn btn--primary w-100 mt-3">Submit Scoping Request</button>
-            <p class="text-sm mt-3 text-center" style="color:var(--silver);">🔒 256-bit AES encrypted. SOC-2 compliant. Mutual NDA executed before any confidential review.</p>
+
+            <div class="grid grid--2-col" style="gap: 1rem; margin-bottom: 1rem;">
+              <div class="form__group" style="margin-bottom:0;">
+                <label class="form__label">Work Email *</label>
+                <input type="email" class="form__input" placeholder="jsmith@biopharma.com" required>
+              </div>
+              <div class="form__group" style="margin-bottom:0;">
+                <label class="form__label">Direct Phone (Optional)</label>
+                <input type="tel" class="form__input" placeholder="+1 (555) 019-2834">
+              </div>
+            </div>
+
+            <div class="grid grid--2-col" style="gap: 1rem; margin-bottom: 1rem;">
+              <div class="form__group" style="margin-bottom:0;">
+                <label class="form__label">Program Stage *</label>
+                <select class="form__select" required>
+                  <option value="" disabled selected>Select Stage</option>
+                  <option value="pre-ind">Pre-Clinical / IND-Enabling</option>
+                  <option value="phase1-2">Phase 1 / Phase 2 Clinical</option>
+                  <option value="phase3">Phase 3 / Pivotal Registration</option>
+                  <option value="filing">NDA / BLA / MAA Filing Phase</option>
+                  <option value="post-approval">Post-Marketing / Lifecycle</option>
+                </select>
+              </div>
+              <div class="form__group" style="margin-bottom:0;">
+                <label class="form__label">Therapeutic Area / Modality *</label>
+                <select class="form__select" required>
+                  <option value="" disabled selected>Select Modality</option>
+                  <option value="oncology">Oncology & Hematology</option>
+                  <option value="cgt">Cell & Gene Therapy (CGT)</option>
+                  <option value="rare">Rare Disease / Orphan</option>
+                  <option value="biologics">Complex Biologics & ADCs</option>
+                  <option value="cns">CNS / Neuroscience</option>
+                  <option value="other">Other Therapeutic Area</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label">Brief Scope & Regulatory Challenge *</label>
+              <textarea class="form__textarea" rows="3" placeholder="Outline your submission target, upcoming HA meeting timeline, or specific Module 2/CSR writing requirements..." required></textarea>
+            </div>
+
+            <!-- Functional Drag & Drop Upload Zone -->
+            <div class="form__group">
+              <label class="form__label">Attach Confidential Briefing Material (Optional)</label>
+              <div class="upload-dropzone" id="dossier-dropzone">
+                <input type="file" id="dossier-file-input" multiple style="display: none;" accept=".pdf,.doc,.docx,.xls,.xlsx,.zip">
+                <svg class="upload-dropzone__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p class="upload-dropzone__title">Drag & drop briefing documents here, or <span style="color:var(--cobalt); text-decoration:underline;">browse files</span></p>
+                <p class="upload-dropzone__subtitle">Supports PDF, DOCX, XLSX up to 50MB &bull; 256-bit AES Encrypted</p>
+              </div>
+              <div class="file-preview-list" id="file-preview-list"></div>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--lg" style="width: 100%; margin-top: 1rem; padding: 1.1rem; font-size: 1rem;">
+              Request Strategic Scoping Session &rarr;
+            </button>
+            <p class="text-sm mt-3 text-center" style="color:#64748B; font-size:0.8rem; margin-bottom:0;">
+              🔒 <strong>Enterprise Security</strong> &bull; SOC-2 Type II Certified &bull; MNDA executed prior to file inspection
+            </p>
           </form>
         </div>
 
-        <!-- Right: Info -->
-        <div class="contact-info-wrapper glass-panel p-5">
-          <h3 class="mb-4">What to Expect</h3>
-          <ul class="timeline-list" style="list-style: none; padding: 0; position: relative;">
-            <li class="mb-4" style="position: relative; padding-left: 2rem;">
-              <span style="position: absolute; left: 0; top: 0; color: var(--cobalt); font-weight: bold;">1.</span>
-              <strong>Submit your scoping request</strong><br>
-              <span class="text-sm" style="color:var(--silver);">24-hour response guarantee</span>
-            </li>
-            <li class="mb-4" style="position: relative; padding-left: 2rem;">
-              <span style="position: absolute; left: 0; top: 0; color: var(--cobalt); font-weight: bold;">2.</span>
-              <strong>NDA execution</strong><br>
-              <span class="text-sm" style="color:var(--silver);">Via secure DocuSign</span>
-            </li>
-            <li class="mb-4" style="position: relative; padding-left: 2rem;">
-              <span style="position: absolute; left: 0; top: 0; color: var(--cobalt); font-weight: bold;">3.</span>
-              <strong>30-minute strategic scoping call</strong>
-            </li>
-            <li class="mb-0" style="position: relative; padding-left: 2rem;">
-              <span style="position: absolute; left: 0; top: 0; color: var(--cobalt); font-weight: bold;">4.</span>
-              <strong>Tailored proposal</strong><br>
-              <span class="text-sm" style="color:var(--silver);">With timeline and deliverables</span>
-            </li>
-          </ul>
-          
-          <hr style="border-color: var(--silver-light); margin: 2rem 0; opacity: 0.3;">
-          
-          <h4 class="mb-3">Direct Contact</h4>
-          <p class="mb-2"><strong>Email:</strong> <a href="mailto:info@blackwellbarton.com" style="color:var(--cobalt);">info@blackwellbarton.com</a></p>
-          <p class="mb-2"><strong>Location:</strong> Fort Worth-Arlington, Texas</p>
-          <p class="mb-0"><strong>Response Time:</strong> Within 24 business hours</p>
+        <!-- Right: What to Expect & Enterprise Security -->
+        <div class="intake-sidebar">
+          <span class="section__tag" style="color:var(--cyan);">CONFIDENTIAL ENGAGEMENT PROTOCOL</span>
+          <h3 style="color:var(--white); margin: 0.5rem 0 1.5rem;">What to Expect</h3>
+
+          <div class="roadmap-steps">
+            <div class="roadmap-step">
+              <div class="roadmap-step__marker">1</div>
+              <div class="roadmap-step__title">Intake & Rapid Triage</div>
+              <p class="roadmap-step__desc">Our leadership team evaluates scope and confirms conflicts within <strong>24 business hours</strong>.</p>
+            </div>
+
+            <div class="roadmap-step">
+              <div class="roadmap-step__marker">2</div>
+              <div class="roadmap-step__title">Mutual NDA Execution</div>
+              <p class="roadmap-step__desc">Automated bilateral confidentiality agreement executed seamlessly via secure DocuSign.</p>
+            </div>
+
+            <div class="roadmap-step">
+              <div class="roadmap-step__marker">3</div>
+              <div class="roadmap-step__title">30-Min Strategic Scoping Session</div>
+              <p class="roadmap-step__desc">Direct strategy session with Dr. Shannon Seitz and specialized practice leads to assess timeline & deliverables.</p>
+            </div>
+
+            <div class="roadmap-step">
+              <div class="roadmap-step__marker">4</div>
+              <div class="roadmap-step__title">Execution Architecture Proposal</div>
+              <p class="roadmap-step__desc">Turnkey proposal with locked milestone calendar, deliverables list, and zero-discrepancy commitment.</p>
+            </div>
+          </div>
+
+          <div class="security-badge-strip">
+            <div class="security-badge">
+              <span class="security-badge__icon">🔒</span>
+              <span class="security-badge__label">256-Bit AES</span>
+            </div>
+            <div class="security-badge">
+              <span class="security-badge__icon">🛡️</span>
+              <span class="security-badge__label">SOC-2 Type II</span>
+            </div>
+            <div class="security-badge">
+              <span class="security-badge__icon">📜</span>
+              <span class="security-badge__label">DocuSign MNDA</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08);">
+            <h4 style="color:var(--white); font-size: 0.95rem; margin-bottom: 0.75rem;">Direct Executive Desk</h4>
+            <p style="color:var(--silver-light); font-size: 0.85rem; margin-bottom: 0.4rem;">
+              <strong>Confidential Inquiries:</strong> <a href="mailto:info@blackwellbarton.com" style="color:var(--cyan);">info@blackwellbarton.com</a>
+            </p>
+            <p style="color:var(--silver-light); font-size: 0.85rem; margin-bottom: 0.4rem;">
+              <strong>Headquarters:</strong> Fort Worth &bull; Arlington, Texas
+            </p>
+            <p style="color:var(--silver-light); font-size: 0.85rem; margin-bottom: 0;">
+              <strong>Standard Response:</strong> Under 24 hours
+            </p>
+          </div>
         </div>
 
       </div>
