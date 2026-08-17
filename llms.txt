@@ -1,0 +1,38 @@
+# Blackwell Barton Biomedical Solutions
+
+> Elite Regulatory Strategy and ICH-Compliant Medical Writing for High-Stakes Biotech and Biopharma Programs.
+
+## Overview
+Blackwell Barton Biomedical Solutions is a specialized regulatory medical writing and strategic consultancy founded by Dr. Shannon Seitz, PhD. Named in honor of Dr. Elizabeth Blackwell (first female M.D. in the US) and Clara Barton (founder of the American Red Cross), the firm provides end-to-end regulatory strategy, CTD dossier synthesis, and health authority engagement advisory for clinical-stage biotech and global biopharma sponsors.
+
+## Key Capabilities & Practice Areas
+- **Strategic Regulatory Roadmaps**: Target Product Profile (TPP) optimization, IND/NDA/BLA regulatory architecture, Fast Track, Breakthrough Therapy Designation (BTD), PRIME, and RMAT expedited pathways.
+- **Regulatory Medical Writing**: ICH E3 Clinical Study Reports (CSRs), Module 2.5 Clinical Overviews, Module 2.7 Clinical Summaries, Investigator's Brochures (IBs), Protocols, and Patient Safety Narratives.
+- **Health Authority Engagement**: FDA Type A/B/C meeting briefing books, EMA Scientific Advice packages, INTERACT meetings, Day 120 response sprints, and Mock Advisory Committee (AdCom) simulations.
+- **Therapeutic Areas & Modalities**: Cell & Gene Therapy (CGT), Immuno-Oncology & Hematology, Rare & Orphan Diseases, Antibody-Drug Conjugates (ADCs), and Complex Biologics.
+
+## Track Record & Verified Metrics
+- **$14B+** in biopharma asset value guided through critical regulatory milestones.
+- **180+** successful health authority interactions across FDA, EMA, PMDA, and Health Canada.
+- **45+** first-cycle regulatory approvals worldwide.
+- **0** clinical holds due to dossier inconsistency or statistical discrepancies ("Zero-Discrepancy Guarantee").
+- **95%+** first-cycle approval rate vs ~68% industry average.
+- **8–10 Weeks** modular dossier delivery timeline vs 16–20 weeks industry standard.
+
+## Leadership
+- **Dr. Shannon Seitz, PhD**: Founder & Principal Regulatory Medical Writer. Ph.D. in Experimental & Social Psychology from Texas Christian University (TCU) under Dr. Charles G. Lord; B.A. in Psychology from Baylor University. Specialist in biostatistics, cognitive decision-making models, and ICH regulatory synthesis. Published author in *Personality and Social Psychology Bulletin* and *Social Cognition*.
+
+## Contact & Engagements
+- **Website**: https://ifeelgod.github.io/blackwellbarton/
+- **Inquiries**: info@blackwellbarton.com
+- **Headquarters**: Fort Worth - Arlington, Texas
+- **Security**: 256-bit AES encryption, SOC-2 compliant infrastructure, all reviews conducted under bilateral Mutual NDA (MNDA).
+
+## Pages & Deep Dives
+- [Homepage](https://ifeelgod.github.io/blackwellbarton/index.html)
+- [Practice Areas & Zero-Discrepancy Model](https://ifeelgod.github.io/blackwellbarton/practice-areas.html)
+- [Therapeutic Areas & Modality Hub](https://ifeelgod.github.io/blackwellbarton/therapeutic-areas.html)
+- [Track Record & Approval Case Studies](https://ifeelgod.github.io/blackwellbarton/track-record.html)
+- [Regulatory Intelligence & Analysis](https://ifeelgod.github.io/blackwellbarton/regulatory-intel.html)
+- [Leadership & Academic Background](https://ifeelgod.github.io/blackwellbarton/leadership.html)
+- [Confidential Scoping & Consultation](https://ifeelgod.github.io/blackwellbarton/contact.html)

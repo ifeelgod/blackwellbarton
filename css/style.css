@@ -1636,13 +1636,35 @@ strong {
   color: var(--white);
 }
 
-/* Timeline Comparison Slider */
-.timeline-comparison {
+/* Timeline Comparison Calculator */
+.timeline-calculator {
+  width: 100%;
+}
+
+.timeline-preset-btn {
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: var(--radius-xl);
-  padding: 3rem;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+  border: 1.5px solid #CBD5E1;
+  border-radius: 30px;
+  padding: 0.5rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timeline-preset-btn:hover {
+  border-color: var(--cobalt);
+  color: var(--cobalt);
+  background: rgba(0, 102, 255, 0.04);
+}
+
+.timeline-preset-btn--active {
+  background: var(--cobalt) !important;
+  color: var(--white) !important;
+  border-color: var(--cobalt) !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.25);
 }
 
 .timeline__track {
