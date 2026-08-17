@@ -258,7 +258,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 10. Auto-update Current Year
+    // 10. Pre-fill Scoping Request from URL Parameters (e.g. ?tier=surge)
+    const urlParams = new URLSearchParams(window.location.search);
+    const tierParam = urlParams.get('tier');
+    const descField = document.getElementById('desc');
+    const phaseField = document.getElementById('phase');
+
+    if (tierParam && descField) {
+        if (tierParam === 'surge') {
+            descField.value = "[Urgent Surge Inquiry] We require rapid regulatory writing support for a fast-approaching health authority deadline / briefing book sprint.";
+            if (phaseField) phaseField.value = 'registration';
+        } else if (tierParam === 'turnkey') {
+            descField.value = "[Turnkey Dossier Synthesis] Seeking full-spectrum ICH E3 CSR and Module 2.5/2.7 authoring under the Zero-Discrepancy Guarantee.";
+            if (phaseField) phaseField.value = 'phase3';
+        } else if (tierParam === 'fractional') {
+            descField.value = "[Fractional Advisory Request] Exploring dedicated regulatory leadership and strategic advisory to guide our upcoming regulatory milestone.";
+            if (phaseField) phaseField.value = 'preclinical';
+        }
+    }
+
+    // 11. Auto-update Current Year
     const currentYear = new Date().getFullYear();
     document.querySelectorAll('.current-year').forEach(el => {
         el.textContent = currentYear;
