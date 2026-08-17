@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackwell Barton | Elite Regulatory Strategy & Medical Writing</title>
+  <meta name="description" content="Elite regulatory strategy and ICH-compliant medical writing for high-stakes biotech and biopharma programs. Built by former agency reviewers and veteran regulatory strategists.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blackwell Barton | De-Risking Regulatory Pathways">
+  <meta property="og:description" content="Elite regulatory strategy and ICH-compliant medical writing for high-stakes biotech and biopharma programs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://blackwellbarton.com/">
+  <meta property="og:image" content="https://blackwellbarton.com/assets/images/og-image.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <style>
+    /* Inline SVG animations for hero */
+    @keyframes pulse-node {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; filter: drop-shadow(0 0 10px var(--cyan)); }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    @keyframes dash-flow {
+      to { stroke-dashoffset: 0; }
+    }
+    .hero__visual-svg .node-circle {
+      transform-origin: center;
+      animation: pulse-node 3s infinite ease-in-out;
+    }
+    .hero__visual-svg .node-circle:nth-child(2) { animation-delay: 0.5s; }
+    .hero__visual-svg .node-circle:nth-child(3) { animation-delay: 1s; }
+    .hero__visual-svg .node-circle:nth-child(4) { animation-delay: 1.5s; }
+    .hero__visual-svg .connector-line {
+      stroke-dasharray: 6;
+      stroke-dashoffset: 60;
+      animation: dash-flow 2s linear infinite;
+    }
+  </style>
+</head>
+<body class="theme-navy">
+
+  <!-- 1. Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">
+        <img src="assets/images/logo.png" alt="" class="nav__logo-img">
+        <span class="nav__logo-text">BLACKWELL BARTON</span>
+      </a>
+      <button class="nav__mobile-toggle" aria-label="Toggle navigation" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li class="nav__dropdown">
+          <a href="practice-areas.html" class="nav__link">Practice Areas</a>
+          <div class="nav__dropdown-content">
+            <a href="practice-areas.html#strategy">Strategic Regulatory Roadmap</a>
+            <a href="practice-areas.html#engagements">Health Authority Engagements</a>
+            <a href="practice-areas.html#writing">Regulatory Medical Writing</a>
+            <a href="practice-areas.html#expedited">Expedited Programs</a>
+          </div>
+        </li>
+        <li><a href="therapeutic-areas.html" class="nav__link">Modalities & TAs</a></li>
+        <li><a href="track-record.html" class="nav__link">Track Record</a></li>
+        <li><a href="regulatory-intel.html" class="nav__link">Regulatory Intel</a></li>
+        <li><a href="leadership.html" class="nav__link">Leadership</a></li>
+        <li><a href="contact.html" class="nav__link nav__cta btn btn--sm btn--primary">Request Scoping</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 2. Hero Section -->
+    <header class="hero section--dark" style="position:relative; overflow:hidden; background: radial-gradient(circle at right top, var(--navy-mid), var(--navy));">
+      <!-- Grid Background Overlay -->
+      <div style="position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; pointer-events:none;"></div>
+      
+      <div class="hero__inner container flex animate-on-scroll">
+        <div class="hero__content" style="flex: 1; z-index: 2; padding-top: 10vh;">
+          <h1 class="hero__title mb-4">De-Risking Regulatory Pathways.<br><span class="text-gradient">Accelerating Global Approvals.</span></h1>
+          <p class="hero__subtitle mb-6" style="color: var(--silver); max-width: 600px; font-size: 1.125rem; line-height: 1.6;">
+            Elite regulatory strategy and ICH-compliant medical writing for high-stakes biotech and biopharma programs. Built by former agency reviewers and veteran regulatory strategists.
+          </p>
+          <div class="hero__ctas flex">
+            <a href="contact.html" class="btn btn--primary btn--lg">Request Strategic Scoping</a>
+            <a href="track-record.html" class="btn btn--ghost btn--lg">Explore Approval Track Record &rarr;</a>
+          </div>
+        </div>
+        
+        <div class="hero__visual" style="flex: 1; display: flex; align-items: center; justify-content: center; z-index: 2; position:relative; min-height: 400px;">
+          <!-- SVG Dossier Node Visualization -->
+          <svg class="hero__visual-svg" viewBox="0 0 500 400" width="100%" height="100%" style="overflow: visible;">
+            <!-- Connectors -->
+            <path class="connector-line" d="M 80 100 Q 200 50 350 150 T 400 300" fill="none" stroke="rgba(0, 210, 255, 0.4)" stroke-width="3" />
+            <path class="connector-line" d="M 80 300 Q 200 350 350 250 T 400 100" fill="none" stroke="rgba(0, 210, 255, 0.2)" stroke-width="2" />
+            <path class="connector-line" d="M 80 200 L 400 200" fill="none" stroke="rgba(197, 165, 90, 0.5)" stroke-width="2" />
+
+            <!-- Nodes & Labels -->
+            <!-- Pre-IND -->
+            <g transform="translate(80, 200)">
+              <circle class="node-circle" cx="0" cy="0" r="16" fill="var(--navy-light)" stroke="var(--cyan)" stroke-width="3"/>
+              <text x="0" y="35" fill="var(--white)" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle" font-weight="500">Pre-IND</text>
+            </g>
+
+            <!-- Fast Track Designation -->
+            <g transform="translate(180, 120)">
+              <circle class="node-circle" cx="0" cy="0" r="24" fill="var(--navy-mid)" stroke="var(--gold)" stroke-width="3"/>
+              <text x="0" y="45" fill="var(--gold-light)" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle" font-weight="500">Fast Track</text>
+            </g>
+
+            <!-- Module 2.5 -->
+            <g transform="translate(280, 260)">
+              <circle class="node-circle" cx="0" cy="0" r="20" fill="var(--navy-mid)" stroke="var(--cyan)" stroke-width="3"/>
+              <text x="0" y="40" fill="var(--white)" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle" font-weight="500">Module 2.5</text>
+            </g>
+
+            <!-- NDA Approval -->
+            <g transform="translate(420, 200)">
+              <circle class="node-circle" cx="0" cy="0" r="32" fill="var(--navy-light)" stroke="var(--success)" stroke-width="4"/>
+              <circle cx="0" cy="0" r="12" fill="var(--success)" opacity="0.5"/>
+              <text x="0" y="55" fill="var(--success)" font-family="'JetBrains Mono', monospace" font-size="14" text-anchor="middle" font-weight="600">NDA Approval</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- 3. Trust / Metrics Bar -->
+    <section class="trust-bar section--navy py-6 border-y" style="border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); background: var(--navy-light);">
+      <div class="container">
+        <div class="trust-bar__metrics flex" style="justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
+          <div class="trust-bar__metric text-center animate-on-scroll">
+            <div class="trust-bar__number text-mono text-gradient count-up" data-target="14" data-prefix="$" data-suffix="B+" style="font-size: 3rem; font-weight: 700;">$0</div>
+            <div class="trust-bar__label mt-2 text-sm" style="color: var(--silver); text-transform: uppercase; letter-spacing: 1px;">Asset Value Guided to Market</div>
+          </div>
+          <div class="trust-bar__metric text-center animate-on-scroll" data-delay="100">
+            <div class="trust-bar__number text-mono text-gradient count-up" data-target="180" data-suffix="+" style="font-size: 3rem; font-weight: 700;">0</div>
+            <div class="trust-bar__label mt-2 text-sm" style="color: var(--silver); text-transform: uppercase; letter-spacing: 1px;">Successful HA Meetings</div>
+          </div>
+          <div class="trust-bar__metric text-center animate-on-scroll" data-delay="200">
+            <div class="trust-bar__number text-mono count-up" data-target="0" data-suffix="" style="font-size: 3rem; font-weight: 700; color: var(--success);">0</div>
+            <div class="trust-bar__label mt-2 text-sm" style="color: var(--silver); text-transform: uppercase; letter-spacing: 1px;">Clinical Holds (Dossier Quality)</div>
+          </div>
+          <div class="trust-bar__metric text-center animate-on-scroll" data-delay="300">
+            <div class="trust-bar__number text-mono text-gradient count-up" data-target="45" data-suffix="+" style="font-size: 3rem; font-weight: 700;">0</div>
+            <div class="trust-bar__label mt-2 text-sm" style="color: var(--silver); text-transform: uppercase; letter-spacing: 1px;">First-Cycle Approvals</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Capability Matrix (Bento Grid) -->
+    <section class="section section--light py-16" style="background: var(--slate);">
+      <div class="container">
+        <div class="text-center mb-12 animate-on-scroll">
+          <h2 class="mb-4" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy);">Comprehensive Regulatory Capabilities</h2>
+          <p style="color: var(--navy-mid); max-width: 600px; margin: 0 auto;">Strategic alignment across all phases of drug development to ensure airtight submissions.</p>
+        </div>
+
+        <div class="bento grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          
+          <!-- Panel 1: Strategy -->
+          <div class="bento__panel card animate-on-scroll fade-up" style="background: var(--white); padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(10,17,40,0.05); transition: transform 0.3s ease;">
+            <div class="bento__icon mb-6" style="color: var(--cobalt);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="bento__title mb-3" style="color: var(--navy);">Strategic Advisory</h3>
+            <p class="bento__desc mb-6" style="color: var(--silver-light); color: #5a6678;">Target Product Profile (TPP) Optimization & Gap Audits. We align clinical goals with regulatory expectations.</p>
+            <a href="practice-areas.html#strategy" class="bento__link text-sm font-semibold" style="color: var(--cobalt); text-decoration: none;">Learn more &rarr;</a>
+          </div>
+
+          <!-- Panel 2: Medical Writing -->
+          <div class="bento__panel card animate-on-scroll fade-up" data-delay="100" style="background: var(--white); padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(10,17,40,0.05); transition: transform 0.3s ease;">
+            <div class="bento__icon mb-6" style="color: var(--cyan);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <path d="M9 15l2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="bento__title mb-3" style="color: var(--navy);">Medical Writing</h3>
+            <p class="bento__desc mb-6" style="color: #5a6678;">Turnkey Module 2.5/2.7 Summaries & ICH E3 Clinical Study Reports (CSRs). Precision-crafted narratives.</p>
+            <a href="practice-areas.html#writing" class="bento__link text-sm font-semibold" style="color: var(--cobalt); text-decoration: none;">Learn more &rarr;</a>
+          </div>
+
+          <!-- Panel 3: Agency Readiness -->
+          <div class="bento__panel card animate-on-scroll fade-up" data-delay="200" style="background: var(--white); padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(10,17,40,0.05); transition: transform 0.3s ease;">
+            <div class="bento__icon mb-6" style="color: var(--gold);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="bento__title mb-3" style="color: var(--navy);">Agency Readiness</h3>
+            <p class="bento__desc mb-6" style="color: #5a6678;">Mock AdComs, Briefing Book Construction, and Day 120 Response Sprints. Engineered for rapid clearance.</p>
+            <a href="practice-areas.html#engagements" class="bento__link text-sm font-semibold" style="color: var(--cobalt); text-decoration: none;">Learn more &rarr;</a>
+          </div>
+
+          <!-- Panel 4: Global Scale -->
+          <div class="bento__panel card animate-on-scroll fade-up" data-delay="300" style="background: var(--white); padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(10,17,40,0.05); transition: transform 0.3s ease;">
+            <div class="bento__icon mb-6" style="color: var(--success);">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="bento__title mb-3" style="color: var(--navy);">Global Scale</h3>
+            <p class="bento__desc mb-6" style="color: #5a6678;">Dual-track FDA/EMA submission synchronizations. Accelerating global market access simultaneously.</p>
+            <a href="practice-areas.html#expedited" class="bento__link text-sm font-semibold" style="color: var(--cobalt); text-decoration: none;">Learn more &rarr;</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Process Visualizer -->
+    <section class="section section--dark py-16" style="background: var(--navy);">
+      <div class="container">
+        <div class="text-center mb-12 animate-on-scroll">
+          <h2 class="mb-4 text-white" style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">Engineered for First-Cycle Approval</h2>
+          <p style="color: var(--silver); max-width: 600px; margin: 0 auto;">Our proprietary Submission-Ready Framework eliminates upstream risk at every phase.</p>
+        </div>
+        <!-- pipeline.js populates this -->
+        <div class="pipeline" id="pipeline" style="min-height: 200px;"></div>
+      </div>
+    </section>
+
+    <!-- 6. Case Study Spotlight -->
+    <section class="section section--light py-16" style="background: var(--white);">
+      <div class="container">
+        <div class="mb-12 animate-on-scroll">
+          <h2 class="mb-4" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy);">Proof of Impact</h2>
+          <p style="color: var(--navy-mid); max-width: 600px;">Real-world results from high-stakes development programs.</p>
+        </div>
+
+        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+          
+          <!-- Featured Case Study -->
+          <article class="card card--case-study animate-on-scroll slide-left" style="background: var(--slate); border-radius: 16px; padding: 3rem; grid-column: 1 / -1;">
+            <div class="card__tag mb-4" style="font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; color: var(--cobalt); font-weight: 600; letter-spacing: 0.5px;">CASE STUDY · IMMUNO-ONCOLOGY</div>
+            <h3 class="card__title mb-4" style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--navy); line-height: 1.3;">How a Series B Immuno-Oncology Biotech Secured FDA Breakthrough Therapy Designation in 60 Days</h3>
+            <p class="card__desc mb-6" style="color: #5a6678; font-size: 1.125rem; line-height: 1.6; max-width: 800px;">With an accelerated 4-month CSR-to-IND delivery, our team constructed a compelling clinical narrative that demonstrated substantial improvement over existing therapies, achieving Breakthrough Therapy Designation on first submission.</p>
+            
+            <div class="flex mb-8" style="gap: 2rem;">
+              <div>
+                <div class="text-mono" style="font-size: 1.5rem; font-weight: 700; color: var(--navy);">60-Day BTD</div>
+                <div class="text-sm" style="color: var(--silver);">Approval Time</div>
+              </div>
+              <div>
+                <div class="text-mono" style="font-size: 1.5rem; font-weight: 700; color: var(--navy);">4-Month</div>
+                <div class="text-sm" style="color: var(--silver);">CSR-to-IND</div>
+              </div>
+              <div>
+                <div class="text-mono" style="font-size: 1.5rem; font-weight: 700; color: var(--success);">First Submission</div>
+                <div class="text-sm" style="color: var(--silver);">Success Rate</div>
+              </div>
+            </div>
+            
+            <a href="track-record.html" class="btn btn--primary">Read Full Case Study &rarr;</a>
+          </article>
+
+          <!-- Smaller Previews -->
+          <article class="card card--case-study animate-on-scroll fade-up" style="background: var(--slate); border-radius: 16px; padding: 2rem;">
+            <div class="card__tag mb-3" style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--gold); font-weight: 600;">RARE DISEASE</div>
+            <h4 class="card__title mb-3" style="font-size: 1.25rem; color: var(--navy); line-height: 1.4;">Rare Disease Orphan Drug: Natural History Study Design to Accelerated Approval</h4>
+            <a href="track-record.html" class="card__link text-sm font-semibold" style="color: var(--cobalt); text-decoration: none;">View Program Details &rarr;</a>
+          </article>
+
+          <article class="card card--case-study animate-on-scroll fade-up" data-delay="100" style="background: var(--slate); border-radius: 16px; padding: 2rem;">
+            <div class="card__tag mb-3" style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--cyan); font-weight: 600;">CELL & GENE THERAPY</div>
+            <h4 class="card__title mb-3" style="font-size: 1.25rem; color: var(--navy); line-height: 1.4;">CGT Program: RMAT Designation & Rolling BLA Submission Strategy</h4>
+            <a href="track-record.html" class="card__link text-sm font-semibold" style="color: var(--cobalt); text-decoration: none;">View Program Details &rarr;</a>
+          </article>
+
+          <article class="card card--case-study animate-on-scroll fade-up" data-delay="200" style="background: var(--slate); border-radius: 16px; padding: 2rem;">
+            <div class="card__tag mb-3" style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--success); font-weight: 600;">ONCOLOGY</div>
+            <h4 class="card__title mb-3" style="font-size: 1.25rem; color: var(--navy); line-height: 1.4;">Phase 3 Oncology: Adaptive Trial Design Saves 14 Months in Development Time</h4>
+            <a href="track-record.html" class="card__link text-sm font-semibold" style="color: var(--cobalt); text-decoration: none;">View Program Details &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Regulatory Readiness Diagnostic -->
+    <section class="section section--light py-16 border-y" style="background: #EAEFF5;">
+      <div class="container">
+        <div class="text-center mb-10 animate-on-scroll">
+          <h2 class="mb-4" style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--navy);">Assess Your Regulatory Readiness</h2>
+          <p style="color: var(--navy-mid); max-width: 600px; margin: 0 auto;">Take our 60-second diagnostic to identify critical gaps in your submission strategy.</p>
+        </div>
+        
+        <!-- diagnostic.js populates this -->
+        <div class="diagnostic mx-auto" id="diagnostic" style="max-width: 800px; background: var(--white); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); min-height: 300px; padding: 2rem;"></div>
+      </div>
+    </section>
+
+    <!-- 8. Conversion Anchor -->
+    <section class="section section--dark py-20" style="background: radial-gradient(circle at center, var(--navy-mid), var(--navy)); position: relative; overflow: hidden;">
+      <div class="container position-relative z-10" style="position: relative; z-index: 10;">
+        <div class="glass-panel mx-auto animate-on-scroll" style="max-width: 700px; backdrop-filter: blur(20px); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 3rem;">
+          
+          <div class="text-center mb-8">
+            <h2 class="mb-4 text-white" style="font-family: 'Playfair Display', serif; font-size: 2.25rem;">Ready to Accelerate Your Regulatory Timeline?</h2>
+            <p style="color: var(--silver); font-size: 1.125rem;">Schedule a confidential strategic scoping call with our regulatory experts. All engagements begin under mutual NDA.</p>
+          </div>
+
+          <form class="form" action="contact.html" method="GET">
+            <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; mb-4">
+              <div class="form__group">
+                <label class="form__label block mb-2 text-sm text-white" for="name">Name</label>
+                <input class="form__input w-full" type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: white;">
+              </div>
+              <div class="form__group">
+                <label class="form__label block mb-2 text-sm text-white" for="company">Company</label>
+                <input class="form__input w-full" type="text" id="company" name="company" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: white;">
+              </div>
+            </div>
+            
+            <div class="form__group mb-4 mt-4">
+              <label class="form__label block mb-2 text-sm text-white" for="email">Work Email</label>
+              <input class="form__input w-full" type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: white;">
+            </div>
+
+            <div class="form__group mb-4 mt-4">
+              <label class="form__label block mb-2 text-sm text-white" for="desc">Brief Description (Optional)</label>
+              <textarea class="form__textarea w-full" id="desc" name="desc" rows="4" style="width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.2); background: rgba(0,0,0,0.2); color: white; resize: vertical;"></textarea>
+            </div>
+
+            <div class="form__upload mb-6 mt-4 p-6 text-center" style="border: 2px dashed rgba(255,255,255,0.2); border-radius: 8px; background: rgba(0,0,0,0.1); cursor: pointer;">
+              <svg class="mx-auto mb-2" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--silver)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <span class="text-sm block" style="color: var(--silver);">Attach confidential documents (NDA-protected)</span>
+              <span class="text-xs block mt-1" style="color: var(--silver-light); opacity: 0.7;">Drag and drop or click to browse</span>
+            </div>
+
+            <button type="submit" class="btn btn--primary w-full form__submit" style="width: 100%; padding: 1rem; font-size: 1.125rem;">Request Strategic Scoping</button>
+            
+            <p class="text-center mt-4 text-xs" style="color: var(--silver);"><span style="color: var(--success);">🔒</span> 256-bit AES encrypted. SOC-2 compliant infrastructure.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 9. Footer -->
+  <footer class="footer" style="background: var(--navy); border-top: 1px solid rgba(255,255,255,0.05); padding-top: 4rem;">
+    <div class="footer__inner container grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;">
+      <div class="footer__col">
+        <img src="assets/images/logo.png" alt="Blackwell Barton" style="height:48px;margin-bottom:16px;">
+        <p style="color:var(--silver);font-size: 0.875rem; max-width:280px; line-height: 1.6;">Elite regulatory strategy and ICH-compliant medical writing for high-stakes biotech and biopharma programs.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading mb-4 text-white" style="font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <a href="practice-areas.html" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Practice Areas</a>
+          <a href="therapeutic-areas.html" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Modalities & TAs</a>
+          <a href="track-record.html" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Track Record</a>
+          <a href="leadership.html" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Leadership</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading mb-4 text-white" style="font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px;">Practice Areas</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <a href="practice-areas.html#strategy" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Regulatory Strategy</a>
+          <a href="practice-areas.html#writing" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Medical Writing</a>
+          <a href="practice-areas.html#engagements" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">HA Engagements</a>
+          <a href="practice-areas.html#expedited" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Expedited Programs</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__heading mb-4 text-white" style="font-family: 'JetBrains Mono', monospace; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px;">Connect</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <a href="contact.html" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Request Scoping Call</a>
+          <a href="regulatory-intel.html" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">Regulatory Intel</a>
+          <a href="mailto:info@blackwellbarton.com" class="footer__link" style="color: var(--silver); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;">info@blackwellbarton.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container py-6 flex" style="border-top: 1px solid rgba(255,255,255,0.05); justify-content: space-between; align-items: center; color: var(--silver); font-size: 0.75rem;">
+      <span class="footer__copyright">© <span class="current-year">2026</span> Blackwell Barton Biomedical Solutions. All Rights Reserved.</span>
+      <span style="display: flex; gap: 1.5rem;">
+        <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+        <a href="#" style="color: inherit; text-decoration: none;">Terms of Service</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/pipeline.js"></script>
+  <script src="js/diagnostic.js"></script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapeutic Areas &amp; Modalities — Blackwell Barton</title>
+    <meta name="description" content="Deep scientific fluency across oncology, rare disease, cell & gene therapy, and complex biologics.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Therapeutic Areas &amp; Modalities — Blackwell Barton">
+    <meta property="og:description" content="Deep scientific fluency across oncology, rare disease, cell & gene therapy, and complex biologics.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/pages.css">
+    
+    <style>
+        /* Matrix specific styling */
+        .matrix__filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .matrix__filter {
+            background: transparent;
+            border: 1px solid var(--silver-light);
+            color: var(--navy);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .matrix__filter:hover {
+            border-color: var(--cobalt);
+            color: var(--cobalt);
+        }
+        .matrix__filter--active {
+            background: var(--cobalt);
+            color: var(--white);
+            border-color: var(--cobalt);
+        }
+        .matrix__filter--active:hover {
+            color: var(--white);
+        }
+        .matrix__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .matrix__card {
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--slate);
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .matrix__card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+            border-color: var(--silver-light);
+        }
+        .matrix__card-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .matrix__icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 102, 255, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cobalt);
+        }
+        .matrix__icon svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+        .matrix__title {
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .matrix__expand-icon {
+            margin-left: auto;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--slate);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+        .matrix__card--expanded .matrix__expand-icon {
+            transform: rotate(180deg);
+            background: var(--cobalt);
+            color: var(--white);
+        }
+        .matrix__body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+            opacity: 0;
+        }
+        .matrix__card--expanded .matrix__body {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 2rem;
+            border-top: 1px solid var(--slate);
+            padding-top: 2rem;
+        }
+        .matrix__detail-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--silver);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        .matrix__detail-text {
+            color: var(--navy-mid);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .matrix__case {
+            background: rgba(0, 196, 140, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--success);
+            color: var(--navy-mid);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="main-nav">
+        <div class="nav__inner container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/images/logo.png" alt="Blackwell Barton Logo" class="nav__logo-img">
+                <span class="nav__logo-text" style="font-family: 'Playfair Display', serif; font-weight: 600; color: var(--navy);">BLACKWELL BARTON</span>
+            </a>
+            <button class="nav__mobile-toggle" aria-label="Toggle navigation" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links" id="nav-links">
+                <li class="nav__dropdown">
+                    <a href="practice-areas.html" class="nav__link">Practice Areas</a>
+                    <div class="nav__dropdown-content">
+                        <a href="practice-areas.html#strategy">Strategic Regulatory Roadmap</a>
+                        <a href="practice-areas.html#engagements">Health Authority Engagements</a>
+                        <a href="practice-areas.html#writing">Regulatory Medical Writing</a>
+                        <a href="practice-areas.html#expedited">Expedited Programs</a>
+                    </div>
+                </li>
+                <li><a href="therapeutic-areas.html" class="nav__link active">Modalities & TAs</a></li>
+                <li><a href="track-record.html" class="nav__link">Track Record</a></li>
+                <li><a href="regulatory-intel.html" class="nav__link">Regulatory Intel</a></li>
+                <li><a href="leadership.html" class="nav__link">Leadership</a></li>
+                <li><a href="contact.html" class="nav__link nav__cta btn btn--primary">Request Scoping</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero section section--navy animate-on-scroll fade-up" style="min-height: 50vh; display: flex; align-items: center; padding-top: 120px; background: var(--navy);">
+        <div class="container text-center">
+            <div class="hero__content">
+                <h1 class="hero__title mb-4" style="color: var(--white); font-size: 3.5rem; line-height: 1.2;">Modality-Specific<br>Scientific Fluency</h1>
+                <p class="hero__subtitle mb-0" style="color: var(--silver-light); font-size: 1.25rem; max-width: 800px; margin: 0 auto;">
+                    Deep therapeutic expertise that translates into scientifically rigorous regulatory strategies and dossiers.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- MATRIX SECTION -->
+    <section class="section section--light animate-on-scroll fade-up" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="text-center mb-6">
+                <span class="badge text-mono mb-3" style="color: var(--cobalt); font-weight: 500; letter-spacing: 1px; display: inline-block;">THERAPEUTIC EXPERTISE</span>
+                <h2 class="mb-5" style="color: var(--navy); font-size: 2.5rem;">Therapeutic Areas &amp; Modalities</h2>
+            </div>
+
+            <!-- Filters -->
+            <div class="matrix__filters" id="matrix-filters">
+                <button class="matrix__filter matrix__filter--active" data-filter="all">All</button>
+                <button class="matrix__filter" data-filter="oncology">Oncology</button>
+                <button class="matrix__filter" data-filter="rare">Rare Disease</button>
+                <button class="matrix__filter" data-filter="cgt">Cell &amp; Gene Therapy</button>
+                <button class="matrix__filter" data-filter="biologics">Complex Biologics</button>
+            </div>
+
+            <!-- Matrix Grid -->
+            <div class="matrix__grid" id="matrix-grid">
+                
+                <!-- Card 1: CGT -->
+                <div class="matrix__card" data-category="cgt">
+                    <div class="matrix__card-header">
+                        <div class="matrix__icon">
+                            <!-- DNA Helix SVG -->
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 8c-1.22-.88-2-2.31-2-3.89 0-.42.06-.82.17-1.2-.56-.25-1.18-.4-1.83-.4-1.74 0-3.32.96-4.14 2.41L4.62 3.32A1 1 0 0 0 3 4v3.5A1.5 1.5 0 0 0 4.5 9H8a1 1 0 0 0 .71-1.71L7.26 5.84C7.79 4.74 8.84 4 10 4c.3 0 .59.05.86.14a4.108 4.108 0 0 0-2.8 3.51l-.05.35c0 1.95 1.14 3.75 2.94 4.52.88.38 1.48 1.15 1.76 2.01l-1.39-1.39a1 1 0 1 0-1.41 1.41L12 16.66l2.12-2.12a1 1 0 0 0-1.41-1.41l-1.4 1.4c-.2-.68-.66-1.28-1.31-1.63-.8-.43-1.41-1.12-1.72-1.95C9.72 10 10.84 9 12.16 9h.03c1.7 0 3.29-1 3.98-2.61L17.65 8A1.5 1.5 0 0 0 19 9h.5A1.5 1.5 0 0 0 21 7.5V4a1 1 0 0 0-1.62-.78l-1.57 1.25C16.94 3 15.54 2 14 2c-.3 0-.59.05-.86.14.73.54 1.28 1.3 1.56 2.18.25.79.25 1.63 0 2.42-.1.3-.23.59-.39.86zM4.5 7H3V4.5L5.5 7H4.5zm15-1h1.5v2.5L18.5 6h1z" fill="currentColor"/></svg>
+                        </div>
+                        <h3 class="matrix__title">Cell &amp; Gene Therapy (CGT)</h3>
+                        <div class="matrix__expand-icon">&#43;</div>
+                    </div>
+                    <div class="matrix__body">
+                        <span class="matrix__detail-label">Strategic Focus</span>
+                        <p class="matrix__detail-text">CMC comparability strategies, RMAT designation support, durability endpoint design, long-term follow-up (LTFU) protocol development.</p>
+                        <span class="matrix__detail-label">Additional Capabilities</span>
+                        <p class="matrix__detail-text">Lentiviral/AAV vector characterization narratives, potency assay justification.</p>
+                        <div class="matrix__case">
+                            <strong>Track Record:</strong> Successfully guided 3 CGT programs through RMAT designation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Oncology -->
+                <div class="matrix__card" data-category="oncology">
+                    <div class="matrix__card-header">
+                        <div class="matrix__icon">
+                            <!-- Cell SVG -->
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-5.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm5-4c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm-5-3c-.83 0-1.5-.67-1.5-1.5S11.17 6 12 6s1.5.67 1.5 1.5S12.83 9 12 9zm-2 4c-.83 0-1.5-.67-1.5-1.5S7.17 10 8 10s1.5.67 1.5 1.5S8.83 13 8 13z" fill="currentColor"/></svg>
+                        </div>
+                        <h3 class="matrix__title">Oncology &amp; Hematology</h3>
+                        <div class="matrix__expand-icon">&#43;</div>
+                    </div>
+                    <div class="matrix__body">
+                        <span class="matrix__detail-label">Strategic Focus</span>
+                        <p class="matrix__detail-text">Single-arm accelerated approval pathways, real-world data (RWD) integration as external control, Project Optimus dose optimization strategies.</p>
+                        <span class="matrix__detail-label">Additional Capabilities</span>
+                        <p class="matrix__detail-text">Tumor-agnostic development strategies, companion diagnostic regulatory coordination.</p>
+                        <div class="matrix__case">
+                            <strong>Track Record:</strong> Supported 12 oncology NDA/BLA submissions across solid tumors and hematologic malignancies.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Rare Disease -->
+                <div class="matrix__card" data-category="rare">
+                    <div class="matrix__card-header">
+                        <div class="matrix__icon">
+                            <!-- Diamond SVG -->
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.16 2.13l-9.87 6.4c-.21.14-.3.41-.18.63l5.88 12.3c.09.19.28.31.5.31h7.02c.22 0 .41-.12.5-.31l5.88-12.3c.12-.22.03-.49-.18-.63l-9.87-6.4a.508.508 0 0 0-.68 0zM12 4.14l6.63 4.3-3.6 1.4-3.03-5.7zm-1.04.14l-3.04 5.73-3.46-1.34 6.5-4.39zM4.68 9.77l2.88 1.12-2.3 8.35-4.04-8.47 3.46-1zM9.46 11.6l2.54.98v6.7l-4.14-5.38 1.6-2.3zm5.08.98l2.54-.98 1.6 2.3-4.14 5.38v-6.7zm4.78-2.81l2.88-1.12 3.46 1-4.04 8.47-2.3-8.35z" fill="currentColor"/></svg>
+                        </div>
+                        <h3 class="matrix__title">Rare Disease / Orphan</h3>
+                        <div class="matrix__expand-icon">&#43;</div>
+                    </div>
+                    <div class="matrix__body">
+                        <span class="matrix__detail-label">Strategic Focus</span>
+                        <p class="matrix__detail-text">Natural history control arm design, patient-focused drug development (PFDD), adaptive trial protocol development, Orphan Drug Designation applications.</p>
+                        <span class="matrix__detail-label">Additional Capabilities</span>
+                        <p class="matrix__detail-text">Small population trial design, patient registry integration strategies.</p>
+                        <div class="matrix__case">
+                            <strong>Track Record:</strong> Achieved orphan drug designation for 8 programs across 6 therapeutic indications.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Biologics / ADCs -->
+                <div class="matrix__card" data-category="biologics">
+                    <div class="matrix__card-header">
+                        <div class="matrix__icon">
+                            <!-- Y-shape Antibody SVG -->
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.84 4.54l-5.66 5.66v9.9l1.41 1.41h-5.66L10.34 20v-9.9L4.69 4.44l1.41-1.41 5.66 5.66 5.66-5.66 1.42 1.51z" fill="currentColor"/></svg>
+                        </div>
+                        <h3 class="matrix__title">Antibody-Drug Conjugates (ADCs)</h3>
+                        <div class="matrix__expand-icon">&#43;</div>
+                    </div>
+                    <div class="matrix__body">
+                        <span class="matrix__detail-label">Strategic Focus</span>
+                        <p class="matrix__detail-text">Toxicological margin justification, bioanalytical method validation write-ups, therapeutic window defense narratives.</p>
+                        <span class="matrix__detail-label">Additional Capabilities</span>
+                        <p class="matrix__detail-text">Linker-payload characterization, immunogenicity risk assessment documentation.</p>
+                        <div class="matrix__case">
+                            <strong>Track Record:</strong> Contributed to 4 ADC IND submissions with zero clinical holds.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CROSS-CUTTING CAPABILITIES -->
+    <section class="section animate-on-scroll fade-up" style="background: var(--slate); padding: 6rem 0;">
+        <div class="container">
+            <h2 class="text-center mb-6" style="color: var(--navy); font-size: 2.25rem;">Cross-Cutting Regulatory Capabilities</h2>
+            
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="bento__panel" style="background: var(--white); padding: 2.5rem; border-radius: 12px; border-top: 3px solid var(--cobalt);">
+                    <h4 style="color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; font-family: 'Plus Jakarta Sans', sans-serif;">Real-World Data Integration</h4>
+                    <p style="color: var(--silver); font-size: 0.95rem; margin: 0;">Leveraging registries and RWD as external controls to satisfy post-marketing commitments and support label expansions.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 2.5rem; border-radius: 12px; border-top: 3px solid var(--cobalt);">
+                    <h4 style="color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; font-family: 'Plus Jakarta Sans', sans-serif;">Adaptive Trial Design Support</h4>
+                    <p style="color: var(--silver); font-size: 0.95rem; margin: 0;">Regulatory justification for seamless phase 1/2 or 2/3 designs, sample size re-estimation, and platform trials.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 2.5rem; border-radius: 12px; border-top: 3px solid var(--cobalt);">
+                    <h4 style="color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; font-family: 'Plus Jakarta Sans', sans-serif;">Pediatric Development Planning</h4>
+                    <p style="color: var(--silver); font-size: 0.95rem; margin: 0;">Crafting Initial Pediatric Study Plans (iPSP) and Paediatric Investigation Plans (PIP) to secure compliance and exclusivity.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 2.5rem; border-radius: 12px; border-top: 3px solid var(--cobalt);">
+                    <h4 style="color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; font-family: 'Plus Jakarta Sans', sans-serif;">Companion Diagnostics Strategy</h4>
+                    <p style="color: var(--silver); font-size: 0.95rem; margin: 0;">Synchronizing CDx validation pathways with therapeutic drug development timelines for simultaneous approval.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 2.5rem; border-radius: 12px; border-top: 3px solid var(--cobalt);">
+                    <h4 style="color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; font-family: 'Plus Jakarta Sans', sans-serif;">Patient-Focused Drug Development</h4>
+                    <p style="color: var(--silver); font-size: 0.95rem; margin: 0;">Incorporating patient preference data and rigorous Patient-Reported Outcomes (PROs) into primary endpoints.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 2.5rem; border-radius: 12px; border-top: 3px solid var(--cobalt);">
+                    <h4 style="color: var(--navy); font-size: 1.1rem; margin-bottom: 0.5rem; font-family: 'Plus Jakarta Sans', sans-serif;">Global Regulatory Harmonization</h4>
+                    <p style="color: var(--silver); font-size: 0.95rem; margin: 0;">Bridging strategies for multi-regional clinical trials (MRCT) per ICH E17 to support simultaneous global filings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="section animate-on-scroll fade-up" style="background: var(--navy); padding: 5rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white); font-size: 2.5rem; margin-bottom: 1.5rem;">Have a Complex Program? Let's Talk Strategy.</h2>
+            <p style="color: var(--silver-light); margin-bottom: 3rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Our scientific and regulatory principals are ready to assess your program's distinct challenges.</p>
+            <a href="contact.html" class="btn btn--primary btn--lg" style="background: var(--cobalt); color: var(--white); padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block;">Request Scoping &rarr;</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="background: var(--navy-light); padding: 4rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container footer__inner" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div class="footer__col">
+                <a href="index.html" class="mb-4" style="display: inline-block;">
+                    <img src="assets/images/logo.png" alt="Blackwell Barton Logo" style="height: 40px; margin-bottom: 1rem;">
+                    <br>
+                    <span style="font-family: 'Playfair Display', serif; font-weight: 600; color: var(--white); letter-spacing: 1px;">BLACKWELL BARTON</span>
+                </a>
+                <p style="color: var(--silver); font-size: 0.9rem; line-height: 1.6;">Premium regulatory medical writing and strategic consulting. Bridging science and strategy to de-risk therapeutic development.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading" style="color: var(--white); margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.75rem;"><a href="therapeutic-areas.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Modalities &amp; TAs</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="track-record.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Track Record</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="regulatory-intel.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Regulatory Intel</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="leadership.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Leadership</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading" style="color: var(--white); margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Practice Areas</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#strategy" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Regulatory Strategy</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#engagements" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Agency Engagements</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#writing" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Medical Writing</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#expedited" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Expedited Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading" style="color: var(--white); margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Connect</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.75rem;"><a href="contact.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="#" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">LinkedIn</a></li>
+                    <li style="margin-bottom: 0.75rem;"><span style="color: var(--silver);">Boston, MA</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer__bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--silver); font-size: 0.85rem;">
+            <p class="footer__copyright">&copy; 2024 Blackwell Barton. All rights reserved.</p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#" style="color: var(--silver); text-decoration: none;">Privacy Policy</a>
+                <a href="#" style="color: var(--silver); text-decoration: none;">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animation observer (if not handled globally)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('animate-on-scroll--visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+            // Matrix Filter & Expansion Logic
+            const filters = document.querySelectorAll('.matrix__filter');
+            const cards = document.querySelectorAll('.matrix__card');
+
+            // Handle Card Expand/Collapse
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Toggle current card
+                    this.classList.toggle('matrix__card--expanded');
+                    // Change icon from + to - and vice versa
+                    const icon = this.querySelector('.matrix__expand-icon');
+                    if (this.classList.contains('matrix__card--expanded')) {
+                        icon.innerHTML = '&#8722;'; // Minus sign
+                    } else {
+                        icon.innerHTML = '&#43;'; // Plus sign
+                    }
+                });
+            });
+
+            // Handle Filtering
+            filters.forEach(filterBtn => {
+                filterBtn.addEventListener('click', () => {
+                    // Update active state on buttons
+                    filters.forEach(btn => btn.classList.remove('matrix__filter--active'));
+                    filterBtn.classList.add('matrix__filter--active');
+
+                    const category = filterBtn.getAttribute('data-filter');
+
+                    // Filter cards
+                    cards.forEach(card => {
+                        // Collapse before filtering for cleaner UI
+                        card.classList.remove('matrix__card--expanded');
+                        card.querySelector('.matrix__expand-icon').innerHTML = '&#43;';
+
+                        if (category === 'all' || card.getAttribute('data-category') === category) {
+                            card.style.display = 'block';
+                            // Small timeout to allow display:block to apply before animating opacity if we were doing complex animations
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

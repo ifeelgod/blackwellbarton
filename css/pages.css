@@ -1,0 +1,310 @@
+@import 'components.css';
+
+/* ==========================================================================
+   Page-Specific Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Homepage
+   -------------------------------------------------------------------------- */
+.hero--home {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero--home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(0, 210, 255, 0.03) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__node-viz {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 80%;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+  background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+@media (max-width: 1024px) {
+  .hero__node-viz {
+    opacity: 0.3;
+  }
+}
+
+.trust-bar--home {
+  padding: var(--space-8) 0;
+  margin-top: -1px; /* seamless attachment to hero */
+}
+
+.case-study-spotlight {
+  border-left: 4px solid var(--gold);
+  padding-left: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.conversion-anchor {
+  max-width: 600px;
+  margin: var(--space-16) auto;
+  padding: var(--space-12);
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------
+   Practice Areas
+   -------------------------------------------------------------------------- */
+.practice-hero {
+  min-height: 60vh;
+}
+
+.practice-section:nth-child(even) {
+  background-color: var(--navy-light);
+}
+
+.practice-section {
+  padding: var(--space-16) 0;
+}
+
+.zero-discrepancy {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 196, 140, 0.2);
+}
+.zero-discrepancy::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 196, 140, 0.1);
+  filter: blur(40px);
+}
+
+.timeline-comparison-section {
+  text-align: center;
+  padding: var(--space-12) 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Therapeutic Areas
+   -------------------------------------------------------------------------- */
+.ta-hero {
+  min-height: 50vh;
+}
+
+.ta-matrix {
+  padding: var(--space-12) 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   Track Record
+   -------------------------------------------------------------------------- */
+.track-hero {
+  min-height: 50vh;
+}
+
+.metrics-dashboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+}
+
+@media (max-width: 768px) {
+  .metrics-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.approval-timeline {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--space-6);
+  padding-bottom: var(--space-4);
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+}
+
+.approval-timeline > * {
+  min-width: 300px;
+  scroll-snap-align: start;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-8);
+  align-items: start;
+}
+
+
+/* --------------------------------------------------------------------------
+   Regulatory Intel
+   -------------------------------------------------------------------------- */
+.intel-hero {
+  min-height: 50vh;
+}
+
+.radar-section {
+  position: relative;
+}
+
+.radar-pulse {
+  width: 12px;
+  height: 12px;
+  background-color: var(--error);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+}
+.radar-pulse::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--error);
+  animation: pulse 2s infinite;
+  opacity: 0;
+}
+@keyframes pulse {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.downloads-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.lead-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+/* --------------------------------------------------------------------------
+   Leadership
+   -------------------------------------------------------------------------- */
+.leadership-hero {
+  min-height: 50vh;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+}
+
+.mission-section {
+  text-align: center;
+  max-width: 800px;
+  margin: var(--space-16) auto;
+  padding: var(--space-12);
+  position: relative;
+}
+.mission-section::before,
+.mission-section::after {
+  content: '"';
+  font-family: var(--font-display);
+  font-size: 120px;
+  color: rgba(255,255,255,0.05);
+  position: absolute;
+  line-height: 1;
+}
+.mission-section::before {
+  top: 0;
+  left: 20px;
+}
+.mission-section::after {
+  bottom: -40px;
+  right: 20px;
+}
+
+
+/* --------------------------------------------------------------------------
+   Contact
+   -------------------------------------------------------------------------- */
+.contact-hero {
+  min-height: 40vh;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: var(--space-16) auto 0;
+}
+
+.faq__item {
+  border-bottom: 1px solid rgba(142, 154, 168, 0.2);
+  cursor: pointer;
+}
+
+.faq__question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) 0;
+  font-weight: var(--fw-semibold);
+  font-size: var(--text-lg);
+  color: var(--white);
+}
+
+.faq__question::after {
+  content: '+';
+  font-size: var(--text-xl);
+  color: var(--cobalt);
+  transition: transform var(--transition-fast);
+}
+
+.faq__item--open .faq__question::after {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal) ease-out, padding var(--transition-normal) ease-out;
+  color: var(--silver);
+  padding: 0 var(--space-2);
+}
+
+.faq__item--open .faq__answer {
+  max-height: 500px;
+  padding-bottom: var(--space-4);
+}

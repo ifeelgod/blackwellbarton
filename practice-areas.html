@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Areas — Blackwell Barton</title>
+    <meta name="description" content="End-to-end regulatory strategy and ICH-compliant medical writing. From IND to NDA, we de-risk every milestone.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Practice Areas — Blackwell Barton">
+    <meta property="og:description" content="End-to-end regulatory strategy and ICH-compliant medical writing. From IND to NDA, we de-risk every milestone.">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/pages.css">
+    <style>
+        /* Inline component styles specifically for this page's unique components if not fully in pages.css */
+        .pipeline-bridge {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 3rem 0;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .pipeline-bridge__node {
+            flex: 1;
+            background: var(--navy);
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--silver-light);
+        }
+        .pipeline-bridge__node h4 {
+            color: var(--white);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .pipeline-bridge__connector {
+            flex: 0 0 40px;
+            height: 2px;
+            background: var(--cobalt);
+            position: relative;
+        }
+        .pipeline-bridge__connector::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 6px 0 6px 8px;
+            border-style: solid;
+            border-color: transparent transparent transparent var(--cobalt);
+        }
+        @media (max-width: 768px) {
+            .pipeline-bridge {
+                flex-direction: column;
+                padding: 1.5rem;
+            }
+            .pipeline-bridge__connector {
+                width: 2px;
+                height: 40px;
+                flex: 0 0 40px;
+            }
+            .pipeline-bridge__connector::after {
+                right: 50%;
+                top: auto;
+                bottom: 0;
+                transform: translateX(50%);
+                border-width: 8px 6px 0 6px;
+                border-color: var(--cobalt) transparent transparent transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="main-nav">
+        <div class="nav__inner container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/images/logo.png" alt="Blackwell Barton Logo" class="nav__logo-img">
+                <span class="nav__logo-text" style="font-family: 'Playfair Display', serif; font-weight: 600; color: var(--navy);">BLACKWELL BARTON</span>
+            </a>
+            <button class="nav__mobile-toggle" aria-label="Toggle navigation" id="nav-toggle">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links" id="nav-links">
+                <li class="nav__dropdown">
+                    <a href="practice-areas.html" class="nav__link active">Practice Areas</a>
+                    <div class="nav__dropdown-content">
+                        <a href="practice-areas.html#strategy">Strategic Regulatory Roadmap</a>
+                        <a href="practice-areas.html#engagements">Health Authority Engagements</a>
+                        <a href="practice-areas.html#writing">Regulatory Medical Writing</a>
+                        <a href="practice-areas.html#expedited">Expedited Programs</a>
+                    </div>
+                </li>
+                <li><a href="therapeutic-areas.html" class="nav__link">Modalities & TAs</a></li>
+                <li><a href="track-record.html" class="nav__link">Track Record</a></li>
+                <li><a href="regulatory-intel.html" class="nav__link">Regulatory Intel</a></li>
+                <li><a href="leadership.html" class="nav__link">Leadership</a></li>
+                <li><a href="contact.html" class="nav__link nav__cta btn btn--primary">Request Scoping</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero section section--navy animate-on-scroll fade-up" style="min-height: 60vh; display: flex; align-items: center; padding-top: 120px;">
+        <div class="container text-center">
+            <div class="hero__content">
+                <h1 class="hero__title mb-4" style="color: var(--white); font-size: 3.5rem; line-height: 1.2;">Full-Spectrum Regulatory Strategy <br>&amp; Medical Writing</h1>
+                <p class="hero__subtitle mb-6" style="color: var(--silver-light); font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem auto;">
+                    From Pre-IND strategy to post-approval lifecycle management, our team delivers zero-discrepancy dossiers that withstand the most rigorous agency scrutiny.
+                </p>
+                <div class="hero__ctas">
+                    <a href="contact.html" class="btn btn--primary btn--lg">Discuss Your Program &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: STRATEGIC REGULATORY ROADMAP -->
+    <section id="strategy" class="section section--light animate-on-scroll fade-up">
+        <div class="container">
+            <div class="text-center mb-6">
+                <span class="badge badge--regulatory text-mono mb-3" style="color: var(--cobalt); font-weight: 500; letter-spacing: 1px; display: inline-block;">REGULATORY STRATEGY</span>
+                <h2 class="mb-4" style="color: var(--navy); font-size: 2.5rem;">Strategic Regulatory Roadmaps</h2>
+                <p style="color: var(--silver); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+                    Navigate IND, NDA, BLA, and MAA pathways with precision. We construct regulatory roadmaps that anticipate health authority expectations and eliminate preventable delays.
+                </p>
+            </div>
+
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                <div class="card card--whitepaper bento__panel animate-on-scroll slide-up" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(10, 17, 40, 0.05); border-top: 4px solid var(--cobalt);">
+                    <h3 class="card__title mb-3" style="color: var(--navy); font-size: 1.25rem;">IND Strategy &amp; Pre-IND Meeting Preparation</h3>
+                    <p class="card__desc" style="color: var(--silver); line-height: 1.6;">Translating early scientific data into compelling IND applications. We craft meeting packages that secure alignment with the FDA on critical nonclinical and phase 1 clinical designs.</p>
+                </div>
+                <div class="card card--whitepaper bento__panel animate-on-scroll slide-up" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(10, 17, 40, 0.05); border-top: 4px solid var(--cobalt); transition-delay: 0.1s;">
+                    <h3 class="card__title mb-3" style="color: var(--navy); font-size: 1.25rem;">NDA/BLA Submission Architecture &amp; Planning</h3>
+                    <p class="card__desc" style="color: var(--silver); line-height: 1.6;">End-to-end dossier architecture. We define the table of contents, establish data cutoffs, and build the story flow across modules to ensure seamless assessor navigation.</p>
+                </div>
+                <div class="card card--whitepaper bento__panel animate-on-scroll slide-up" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(10, 17, 40, 0.05); border-top: 4px solid var(--cobalt); transition-delay: 0.2s;">
+                    <h3 class="card__title mb-3" style="color: var(--navy); font-size: 1.25rem;">MAA &amp; EU Centralized Procedure Navigation</h3>
+                    <p class="card__desc" style="color: var(--silver); line-height: 1.6;">European regulatory maneuvering. From Scientific Advice with the EMA to navigating the Centralized Procedure, we optimize your global filing strategy.</p>
+                </div>
+                <div class="card card--whitepaper bento__panel animate-on-scroll slide-up" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 20px rgba(10, 17, 40, 0.05); border-top: 4px solid var(--cobalt); transition-delay: 0.3s;">
+                    <h3 class="card__title mb-3" style="color: var(--navy); font-size: 1.25rem;">Rolling Submission &amp; Priority Review Strategies</h3>
+                    <p class="card__desc" style="color: var(--silver); line-height: 1.6;">Structuring modular submissions to maximize review speed. We sequence components to capitalize on priority review designations without disrupting quality control.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: HEALTH AUTHORITY ENGAGEMENTS -->
+    <section id="engagements" class="section animate-on-scroll fade-up" style="background: var(--slate); padding: 6rem 0;">
+        <div class="container">
+            <div class="text-center mb-6">
+                <span class="badge text-mono mb-3" style="color: var(--cobalt); font-weight: 500; letter-spacing: 1px; display: inline-block;">AGENCY ENGAGEMENT</span>
+                <h2 class="mb-4" style="color: var(--navy); font-size: 2.5rem;">Health Authority Meeting Mastery</h2>
+                <p style="color: var(--silver); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                    We have managed 180+ successful interactions with FDA, EMA, PMDA, and Health Canada. Every meeting is an opportunity to shape your regulatory narrative.
+                </p>
+            </div>
+
+            <div class="bento grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem;">
+                <div class="bento__panel" style="background: var(--white); padding: 3rem; border-radius: 12px;">
+                    <h3 style="color: var(--navy); font-size: 1.5rem; margin-bottom: 1rem;">FDA Type A, B, C Meetings</h3>
+                    <p style="color: var(--silver); line-height: 1.6;">From resolving clinical holds (Type A) to critical milestone alignments (Type B) and specialized guidance (Type C). We draft precise briefing documents that constrain agency responses to actionable feedback, avoiding open-ended queries that invite scope creep.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 3rem; border-radius: 12px;">
+                    <h3 style="color: var(--navy); font-size: 1.5rem; margin-bottom: 1rem;">EMA Scientific Advice &amp; INTERACT</h3>
+                    <p style="color: var(--silver); line-height: 1.6;">Securing early alignment with CHMP and national competent authorities. For early-stage biologicals and ATMPs, our INTERACT meeting preparation provides vital de-risking before formal IND/CTA phases begin.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 3rem; border-radius: 12px;">
+                    <h3 style="color: var(--navy); font-size: 1.5rem; margin-bottom: 1rem;">Pre-BLA/Pre-NDA Meetings</h3>
+                    <p style="color: var(--silver); line-height: 1.6;">The ultimate submission stress-test. We architect Pre-NDA/BLA packages to secure agreement on formatting, dataset structure, and facility readiness, minimizing Day 74 filing issues and Refusal to File (RTF) risks.</p>
+                </div>
+                <div class="bento__panel" style="background: var(--white); padding: 3rem; border-radius: 12px;">
+                    <h3 style="color: var(--navy); font-size: 1.5rem; margin-bottom: 1rem;">Advisory Committee (AdCom) Preparation</h3>
+                    <p style="color: var(--silver); line-height: 1.6;">High-stakes defense. We develop core presentations, conduct grueling Q&amp;A stress tests, and assemble briefing materials that distill complex risk-benefit profiles into undeniable clinical imperatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: REGULATORY MEDICAL WRITING -->
+    <section id="writing" class="section section--navy animate-on-scroll fade-up" style="background: var(--navy); padding: 6rem 0;">
+        <div class="container">
+            <div class="text-center mb-6">
+                <span class="badge text-mono mb-3" style="color: var(--cyan); font-weight: 500; letter-spacing: 1px; display: inline-block;">MEDICAL WRITING</span>
+                <h2 class="mb-4" style="color: var(--white); font-size: 2.5rem;">Regulatory Medical Writing &amp; Dossier Synthesis</h2>
+                <p style="color: var(--silver-light); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                    End-to-end traceability and deductive messaging. Our medical writing practice bridges Biostatistics, Clinical Ops, and Regulatory Affairs.
+                </p>
+            </div>
+
+            <!-- The "Zero-Discrepancy" Guarantee Panel -->
+            <div class="glass-panel pipeline-bridge">
+                <div class="pipeline-bridge__node">
+                    <h4>Biostatistics</h4>
+                    <p style="color: var(--silver); font-size: 0.9rem;">SAP / TFLs</p>
+                </div>
+                <div class="pipeline-bridge__connector"></div>
+                <div class="pipeline-bridge__node">
+                    <h4>Clinical Narrative</h4>
+                    <p style="color: var(--silver); font-size: 0.9rem;">Safety &amp; Efficacy Story</p>
+                </div>
+                <div class="pipeline-bridge__connector"></div>
+                <div class="pipeline-bridge__node">
+                    <h4>Regulatory Positioning</h4>
+                    <p style="color: var(--silver); font-size: 0.9rem;">Agency Alignment</p>
+                </div>
+            </div>
+            <p class="text-center mb-6" style="color: var(--cyan); font-weight: 500; font-style: italic;">
+                "Eliminating Information Requests through upstream narrative alignment."
+            </p>
+
+            <!-- Deliverables Grid -->
+            <div class="deliverables-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem;">
+                <div class="deliverable" style="background: var(--navy-mid); padding: 2.5rem; border-radius: 12px; border-left: 4px solid var(--gold);">
+                    <h3 class="deliverable__title" style="color: var(--white); margin-bottom: 1rem; font-size: 1.25rem;">1. Clinical Study Reports (ICH E3)</h3>
+                    <p class="deliverable__desc" style="color: var(--silver-light); line-height: 1.6;">Rapid-turnaround core and synoptic reports constructed with locked statistical outputs and pre-aligned regulatory narratives.</p>
+                </div>
+                <div class="deliverable" style="background: var(--navy-mid); padding: 2.5rem; border-radius: 12px; border-left: 4px solid var(--gold);">
+                    <h3 class="deliverable__title" style="color: var(--white); margin-bottom: 1rem; font-size: 1.25rem;">2. Module 2 CTD Dossiers</h3>
+                    <p class="deliverable__desc" style="color: var(--silver-light); line-height: 1.6;">High-impact Module 2.5 Clinical Overviews &amp; 2.7 Summaries that tell a compelling, defensible story to assessors.</p>
+                </div>
+                <div class="deliverable" style="background: var(--navy-mid); padding: 2.5rem; border-radius: 12px; border-left: 4px solid var(--gold);">
+                    <h3 class="deliverable__title" style="color: var(--white); margin-bottom: 1rem; font-size: 1.25rem;">3. Patient Safety Narratives</h3>
+                    <p class="deliverable__desc" style="color: var(--silver-light); line-height: 1.6;">Forensic SAE narratives constructed for clear causal de-risking with transparent medical assessment.</p>
+                </div>
+                <div class="deliverable" style="background: var(--navy-mid); padding: 2.5rem; border-radius: 12px; border-left: 4px solid var(--gold);">
+                    <h3 class="deliverable__title" style="color: var(--white); margin-bottom: 1rem; font-size: 1.25rem;">4. Investigator's Brochures &amp; Protocols</h3>
+                    <p class="deliverable__desc" style="color: var(--silver-light); line-height: 1.6;">Scientifically rigorous clinical protocols optimized for site feasibility and health authority clearance.</p>
+                </div>
+            </div>
+
+            <!-- Timeline Comparison -->
+            <div style="margin-top: 6rem; padding-top: 4rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="text-center mb-5">
+                    <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 1rem;">Faster Dossier Delivery Through Modular Architecture</h3>
+                    <p style="color: var(--silver-light); max-width: 700px; margin: 0 auto;">Our parallel writing framework cuts delivery timelines by 40-50% without compromising quality.</p>
+                </div>
+                <div class="timeline-comparison" id="timeline-comparison" style="background: var(--navy-mid); padding: 3rem; border-radius: 12px; min-height: 200px; display: flex; align-items: center; justify-content: center; color: var(--silver);">
+                    <!-- Timeline will be populated by timeline.js -->
+                    [Interactive Timeline Visualization Rendered Here]
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: EXPEDITED PROGRAMS & DESIGNATIONS -->
+    <section id="expedited" class="section section--light animate-on-scroll fade-up" style="padding: 6rem 0;">
+        <div class="container">
+            <div class="text-center mb-6">
+                <span class="badge text-mono mb-3" style="color: var(--cobalt); font-weight: 500; letter-spacing: 1px; display: inline-block;">EXPEDITED PATHWAYS</span>
+                <h2 class="mb-4" style="color: var(--navy); font-size: 2.5rem;">Expedited Programs &amp; Special Designations</h2>
+                <p style="color: var(--silver); max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+                    Maximize your eligibility for accelerated regulatory pathways. We've secured 30+ expedited designations across breakthrough therapy, fast track, PRIME, and RMAT.
+                </p>
+            </div>
+
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                
+                <div class="card" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(0, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--cobalt); font-weight: bold; font-size: 1.2rem;">BTD</div>
+                    <h3 style="color: var(--navy); font-size: 1.25rem; margin-bottom: 1rem;">FDA Breakthrough Therapy Designation</h3>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem; color: var(--silver); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;">&check; Intensive FDA guidance</li>
+                        <li style="margin-bottom: 0.5rem;">&check; Rolling review eligible</li>
+                    </ul>
+                    <p style="color: var(--silver); font-size: 0.9rem; border-top: 1px solid var(--slate); padding-top: 1rem;"><strong>Our Approach:</strong> We pinpoint the preliminary clinical evidence that undeniably demonstrates substantial improvement over existing therapies.</p>
+                </div>
+
+                <div class="card" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(0, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--cobalt); font-weight: bold; font-size: 1.2rem;">FTD</div>
+                    <h3 style="color: var(--navy); font-size: 1.25rem; margin-bottom: 1rem;">FDA Fast Track Designation</h3>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem; color: var(--silver); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;">&check; More frequent meetings</li>
+                        <li style="margin-bottom: 0.5rem;">&check; Priority review potential</li>
+                    </ul>
+                    <p style="color: var(--silver); font-size: 0.9rem; border-top: 1px solid var(--slate); padding-top: 1rem;"><strong>Our Approach:</strong> We build the narrative around the unmet medical need and how the nonclinical or clinical data addresses it robustly.</p>
+                </div>
+
+                <div class="card" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(0, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--cobalt); font-weight: bold; font-size: 1.2rem;">PRM</div>
+                    <h3 style="color: var(--navy); font-size: 1.25rem; margin-bottom: 1rem;">EMA PRIME (Priority Medicines)</h3>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem; color: var(--silver); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;">&check; Enhanced EMA support</li>
+                        <li style="margin-bottom: 0.5rem;">&check; Accelerated assessment</li>
+                    </ul>
+                    <p style="color: var(--silver); font-size: 0.9rem; border-top: 1px solid var(--slate); padding-top: 1rem;"><strong>Our Approach:</strong> European-tailored messaging that highlights major therapeutic advantage in areas of unmet need within the EU landscape.</p>
+                </div>
+
+                <div class="card" style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div style="width: 50px; height: 50px; background: rgba(0, 102, 255, 0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--cobalt); font-weight: bold; font-size: 1.2rem;">RMA</div>
+                    <h3 style="color: var(--navy); font-size: 1.25rem; margin-bottom: 1rem;">FDA RMAT Designation</h3>
+                    <ul style="list-style: none; padding: 0; margin-bottom: 1.5rem; color: var(--silver); font-size: 0.95rem;">
+                        <li style="margin-bottom: 0.5rem;">&check; All Fast Track/BTD benefits</li>
+                        <li style="margin-bottom: 0.5rem;">&check; Early CMC discussions</li>
+                    </ul>
+                    <p style="color: var(--silver); font-size: 0.9rem; border-top: 1px solid var(--slate); padding-top: 1rem;"><strong>Our Approach:</strong> We specialize in the unique CMC, comparability, and durable efficacy narratives required for cell and gene therapies.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="section animate-on-scroll fade-up" style="background: var(--navy); padding: 5rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: var(--white); font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to Streamline Your Regulatory Pathway?</h2>
+            <p style="color: var(--silver-light); margin-bottom: 3rem; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Schedule a strategic scoping session with our senior leadership to discuss your immediate milestones and long-term targets.</p>
+            <a href="contact.html" class="btn btn--primary btn--lg" style="background: var(--cobalt); color: var(--white); padding: 1rem 2.5rem; border-radius: 30px; text-decoration: none; font-weight: 600; display: inline-block;">Request Scoping &rarr;</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="background: var(--navy-light); padding: 4rem 0 2rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container footer__inner" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+            <div class="footer__col">
+                <a href="index.html" class="mb-4" style="display: inline-block;">
+                    <img src="assets/images/logo.png" alt="Blackwell Barton Logo" style="height: 40px; margin-bottom: 1rem;">
+                    <br>
+                    <span style="font-family: 'Playfair Display', serif; font-weight: 600; color: var(--white); letter-spacing: 1px;">BLACKWELL BARTON</span>
+                </a>
+                <p style="color: var(--silver); font-size: 0.9rem; line-height: 1.6;">Premium regulatory medical writing and strategic consulting. Bridging science and strategy to de-risk therapeutic development.</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading" style="color: var(--white); margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Quick Links</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.75rem;"><a href="therapeutic-areas.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Modalities &amp; TAs</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="track-record.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Track Record</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="regulatory-intel.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Regulatory Intel</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="leadership.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Leadership</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading" style="color: var(--white); margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Practice Areas</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#strategy" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Regulatory Strategy</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#engagements" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Agency Engagements</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#writing" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Medical Writing</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="practice-areas.html#expedited" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Expedited Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__heading" style="color: var(--white); margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Connect</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.75rem;"><a href="contact.html" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+                    <li style="margin-bottom: 0.75rem;"><a href="#" class="footer__link" style="color: var(--silver); text-decoration: none; transition: color 0.3s;">LinkedIn</a></li>
+                    <li style="margin-bottom: 0.75rem;"><span style="color: var(--silver);">Boston, MA</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer__bottom" style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; color: var(--silver); font-size: 0.85rem;">
+            <p class="footer__copyright">&copy; 2024 Blackwell Barton. All rights reserved.</p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#" style="color: var(--silver); text-decoration: none;">Privacy Policy</a>
+                <a href="#" style="color: var(--silver); text-decoration: none;">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/timeline.js"></script>
+    <script>
+        // Simple observer for animations if main.js doesn't auto-init
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting) {
+                        entry.target.classList.add('animate-on-scroll--visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
